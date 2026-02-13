@@ -1,0 +1,60 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="kids-theme">
+    <nav class="dashboard-nav">
+        <h1>🦸 Shield Hero Academy</h1>
+        <button class="logout-btn" onclick="window.location.href='index.html'">Back Home</button>
+    </nav>
+
+    <div class="container">
+        <h2>Hello, Hero <span id="display-name"></span>!</h2>
+        <p>Learn your safety superpowers today.</p>
+<ul class="nav nav-tabs mb-4" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" 
+                        onclick="window.location.href='kidsdef.html'"
+                        type="button">
+                    Defense
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" 
+                        id="finance-tab" 
+                        data-bs-toggle="tab" 
+                        data-bs-target="#finance-tab-pane"                         onclick="window.location.href='mensdef.html'"
+                        onclick="window.location.href='kidsexc.html'"
+
+
+                        type="button" 
+                        role="tab">
+                    Exercises
+                </button>
+            </li>
+        </ul>
+
+        <div class="action-grid">
+            <div class="card">
+                <span class="card-icon">✋</span>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/hLYOlAI29V4?si=5jDQraRF6gjaCzUB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🏃</span>
+                <h3>Safe Places</h3>
+                <p>Know where to run, like a store with a bright sign or a neighbor's house.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">📞</span>
+                <h3>The Secret Code</h3>
+                <p>Memorize your parents' phone numbers to call for help!</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="sos-footer">
+        <a href="tel:100" class="sos-btn-large">📢 CALL FOR HELP</a>
+    </footer>
+</body>

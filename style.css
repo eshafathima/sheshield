@@ -8,8 +8,8 @@ body {
 }
 
 nav {
-    background: #2f2944;
-    color: white;
+    background:rgb(10, 4, 4);
+    color: rgb(247, 225, 225);
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -19,7 +19,7 @@ nav {
 }
 .type{
     margin-top: 20px;
-    padding: 30px;
+    padding: 0px;
     background: #3b3a3f;
     color: #d6e4e7;
     border-radius: 10px;
@@ -50,7 +50,7 @@ header {
 }
 
 .card {
-    background: white;
+    background: rgb(10, 4, 4);
     padding: 15px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -120,4 +120,88 @@ header {
         width: 100%; /* Full width on tiny screens */
         height: 80px;
     }
+}
+ 
+/* Global Styles */
+body { background-color: #020217; color: #e6e5ea; font-family: sans-serif; }
+.card { background: #2f2944; padding: 20px; border-radius: 15px; text-align: center; }
+
+/* Category Accents */
+.women-theme .card { border-bottom: 3px solid #eb2bc5; } /* Pink */
+.men-theme .card { border-bottom: 3px solid #0984e3; }   /* Blue */
+.kids-theme .card { border-bottom: 3px solid #fdcb6e; }  /* Yellow */
+.senior-theme .card { border-bottom: 3px solid #55efc4; }/* Green *//* Global */
+.card { padding: 20px; border-radius: 15px; background: #2f2944; margin: 10px; }
+
+/* Women's Theme */
+.women-theme { border-top: 5px solid #ff7675; }
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;  
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+ Pregnancy Theme Colors */
+body.pregnancy-theme {
+    background-color: #160530;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.pregnancy-theme nav {
+    background-color: #020217; /* Deep Purple */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Tab Styling */
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.nav-link {
+    border: none;
+    padding: 12px 25px;
+    margin: 0 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #1e1e6c;
+    color:  #020217;
+    transition: 0.3s;
+}
+
+.nav-link.active {
+    background-color:  #1e1e6c;
+    color: white;
+}
+
+/* Card Styling */
+.card {
+    background: #020217;
+    margin: 15px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 5px solid #1f0c36;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #e0dde5;
 }

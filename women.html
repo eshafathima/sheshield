@@ -1,30 +1,60 @@
-<div id="dashboard-screen" class="screen" style="display:none;">
-    <nav class="dashboard-nav">
-        <div class="nav-left">
-            <h2 id="current-cat-display">Dashboard</h2>
-            <p>Welcome back, <span id="user-name-span"></span></p>
-        </div>
-        <button class="logout-btn" onclick="location.reload()">Logout</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Women's Defense | Shield</title>
+</head>
+<body class="category-page women-theme">
+    <nav>
+        <h1>Shield: Women's Hub</h1>
+        <button onclick="window.location.href='index.html'">Logout</button>
     </nav>
 
-    <div class="dashboard-container">
-        <div class="action-grid">
-            <div class="main-card" onclick="showSection('defense')">
-                <div class="card-icon">🥋</div>
-                <h3>Self-Defense</h3>
+    <div class="content">
+        <h2>Welcome, <span id="display-name"></span></h2>
+        
+        <section class="defense-grid">
+            <div class="card">
+                <h3>Vulnerable Points</h3>
+                <p>Learn where to strike to disable an attacker regardless of size.</p>
+                
             </div>
-            <div class="main-card" onclick="showSection('fitness')">
-                <div class="card-icon">🏋️</div>
-                <h3>Fitness</h3>
+            
+            <div class="card">
+                <h3>Escaping Grabs</h3>
+                <p>Techniques for wrist, hair, and bear-hug escapes.</p>
             </div>
-            <div class="main-card" onclick="showSection('checklist')">
-                <div class="card-icon">✅</div>
-                <h3>Checklist</h3>
-            </div>
-        </div>
+                    <ul class="nav nav-tabs mb-4" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" 
+                        onclick="window.location.href='womendef.html'"
+                        type="button">
+                    Defense
+                </button>
+            </li>
 
-        <div id="content-display" class="content-box">
-            <p>Select a category above to start your training.</p>
-        </div>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" 
+                        id="finance-tab" 
+                        data-bs-toggle="tab" 
+                        data-bs-target="#finance-tab-pane"                        
+                        onclick="window.location.href='womenexc.html'"
+
+
+                        type="button" 
+                        role="tab">
+                    Exercises
+                </button>
+            </li>
+        </ul>
+        </section>
+
+        <a href="tel:100" class="sos-btn">🚨 EMERGENCY SOS</a>
     </div>
-</div>
+
+    <script>
+        // Load the name from localStorage
+        document.getElementById('display-name').innerText = localStorage.getItem("currentUser");
+    </script>
+</body>
+</html>

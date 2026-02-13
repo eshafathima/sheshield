@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Hub | Shield</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body class="men-theme">
+    <nav class="dashboard-nav">
+        <div class="nav-left">
+            <h2>Men's Safety Hub</h2>
+            <p>Welcome back, <span id="display-name">User</span></p>
+        </div>
+        <button class="logout-btn" onclick="window.location.href='index.html'">Main Menu</button>
+    </nav>
+
+    <div class="container">
+        <div class="info-box">
+            <h3>Focus: Strategic Defense</h3>
+            <p>Training focuses on high-impact defense and conflict avoidance.</p>
+        </div>
+
+        <ul class="nav nav-tabs mb-4" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" 
+                        onclick="window.location.href='mensdef.html'"
+                        type="button">
+                    Defense
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" 
+                        id="finance-tab" 
+                        data-bs-toggle="tab" 
+                        data-bs-target="#finance-tab-pane"                         onclick="window.location.href='mensdef.html'"
+                        onclick="window.location.href='mensdef.html'"
+
+
+                        type="button" 
+                        role="tab">
+                    Exercises
+                </button>
+            </li>
+        </ul>
+
+        <div class="action-grid">
+            <div class="card">
+                <div class="card-icon">👁️</div>
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Q08coIvqXjM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <div class="video-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Q08coIvqXjM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="sos-footer">
+        <a href="tel:100" class="sos-btn-large">🆘 SOS EMERGENCY</a>
+    </footer>
+
+    <script>
+        document.getElementById('display-name').innerText = localStorage.getItem("currentUser") || "Guest";
+    </script>
+</body>
+</html>

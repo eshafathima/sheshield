@@ -35,17 +35,17 @@ function proceedToCategory() {
 }
 
 // 2. Handle Category Selection
+// In your script.js
 function setCategory(cat) {
-    selectedCategory = cat;
-    localStorage.setItem("cat_" + currentUser, cat);
+    const user = document.getElementById('username').value || "Guest";
+    localStorage.setItem("currentUser", user); // Save name to show on next page
     
-    document.getElementById('current-cat-display').innerText = selectedCategory + " Hub";
-    document.getElementById('user-name-span').innerText = currentUser;
-
-    document.getElementById('category-screen').style.display = 'none';
-    document.getElementById('dashboard-screen').style.display = 'block';
+    // Redirect based on category
+    if (cat === 'Women') window.location.href = 'women.html';
+    else if (cat === 'Men') window.location.href = 'men.html';
+    else if (cat === 'Kids') window.location.href = 'kids.html';
+    else if (cat === 'Senior') window.location.href = 'seniors.html';
 }
-
 // 3. Toggle between Login and Register
 function toggleAuth(showLogin) {
     isLoginMode = showLogin;
