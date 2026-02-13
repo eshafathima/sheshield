@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shield | Personalized self defense and fitness platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="auth-screen" class="screen">
+        <div class="auth-card">
+            <h1>SHIELD</h1>
+            <h2>Your Personal Safety & Fitness Hub</h2>
+            <input type="text" id="username" placeholder="Enter Your Name">
+            <input type="password" id="password" placeholder="Create Password">
+            <button class="primary-btn" onclick="handleLogin()">create account</button>
+            <p id="toggle-text" style="margin-top: 15px; font-size: 0.9rem;">
+                Already have an account? <a href="#" onclick="toggleAuth(true)" style="color: #6c5ce7; font-weight: bold; text-decoration: none;">Login here</a>
+            </p>
+            <div class="type"> 
+            <h4>
+                Why Join SheShield?</h4><h3></h3>
+Physical safety begins with mental and physical preparedness. By creating an account, you unlock a personalized safety dashboard tailored specifically to your needs—whether you are a student, a senior, or an athlete. Access expert-curated self-defense techniques and strength-building exercises designed for your body type and lifestyle.
+Your journey to a safer, more confident you starts here.</h>
+<h3>Step 1: Create Your Profile 🔐</h3>
+<h4>
+Register with your basic details and select your category (e.g., Women, Senior Citizen, or Kids).</h4>
+
+<h3>>Step 2: Explore Your Dashboard 🏠</h3>
+<h4>
+Access a customized library of self-defense videos and fitness drills specifically designed for your physical needs.
+</h4>
+<h3>Step 3: Stay Prepared ✅</h3>
+<h4>
+Use the daily safety checklist before leaving home and keep the SOS button ready for immediate help.</h4></div>
+        </div>
+    </div>
+
+    <div id="category-screen" class="screen" style="display:none;">
+        <nav><h1>Welcome <span id="user-display"></span></h1></nav>
+        <h1>Select Your Category</h1>
+        <div class="category-grid">
+            <button onclick="setCategory('Women')">👩 Women</button >
+            <button onclick="setCategory('Men')">👨 Men</button>
+            <button onclick="setCategory('Pregnant')">🤰 Pregnant Women</button>
+            <button onclick="setCategory('Senior')">👵 Senior Citizens</button>
+            <button onclick="setCategory('Kids')">👧 Kids</button>
+        </div>
+    </div>
+
+    <div id="dashboard-screen" class="screen" style="display:none;">
+    <nav class="dashboard-nav">
+        <div class="nav-left">
+            <h2 id="current-cat-display">Dashboard</h2>
+            <p>Ready to train, <span id="user-name-span"></span>?</p>
+        </div>
+        <button class="logout-btn" onclick="location.reload()">Logout</button>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="action-grid">
+            <div class="main-card defense" onclick="showSection('defense')">
+                <div class="card-icon">🥋</div>
+                <h3>Self-Defense</h3>
+                <p>Tailored techniques</p>
+            </div>
+
+            <div class="main-card fitness" onclick="showSection('fitness')">
+                <div class="card-icon">🏋️</div>
+                <h3>Fitness & Prep</h3>
+                <p>Build your strength</p>
+            </div>
+
+            <div class="main-card checklist" onclick="showSection('checklist')">
+                <div class="card-icon">✅</div>
+                <h3>Checklist</h3>
+                <p>Preparation tools</p>
+            </div>
+        </div>
+
+        <div id="content-display" class="content-box">
+            <div class="placeholder-msg">
+                <p><i>Click a category above to load your training modules.</i></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="sos-footer">
+        <a href="tel:100" class="sos-btn-large">🆘 SOS EMERGENCY</a>
+    </footer>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

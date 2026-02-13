@@ -1,0 +1,30 @@
+<div id="dashboard-screen" class="screen" style="display:none;">
+    <nav class="dashboard-nav">
+        <div class="nav-left">
+            <h2 id="current-cat-display">Dashboard</h2>
+            <p>Welcome back, <span id="user-name-span"></span></p>
+        </div>
+        <button class="logout-btn" onclick="location.reload()">Logout</button>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="action-grid">
+            <div class="main-card" onclick="showSection('defense')">
+                <div class="card-icon">🥋</div>
+                <h3>Self-Defense</h3>
+            </div>
+            <div class="main-card" onclick="showSection('fitness')">
+                <div class="card-icon">🏋️</div>
+                <h3>Fitness</h3>
+            </div>
+            <div class="main-card" onclick="showSection('checklist')">
+                <div class="card-icon">✅</div>
+                <h3>Checklist</h3>
+            </div>
+        </div>
+
+        <div id="content-display" class="content-box">
+            <p>Select a category above to start your training.</p>
+        </div>
+    </div>
+</div>
