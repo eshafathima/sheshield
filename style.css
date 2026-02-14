@@ -205,3 +205,127 @@ body.pregnancy-theme nav {
     margin-top: 0;
     color: #e0dde5;
 }
+/* Senior Theme Variables */
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --primary-blue: #1a3a5f;
+    --accent-gold: #f39c12;
+    --text-main: #222222;
+    --tab-inactive: #e9ecef;
+}
+
+body.senior-theme {
+    background-color: var(--bg-color);
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+/* Navbar / Header */
+nav {
+    background-color: var(--primary-blue);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Content Container */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Card Styling */
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    border-left: 8px solid var(--primary-blue);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--primary-blue);
+    font-size: 1.6rem;
+}
+
+.card p {
+    font-size: 1.2rem; /* Larger text for readability */
+}
+
+/* Nav Tabs Styling */
+.nav-tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--primary-blue);
+}
+
+.nav-item {
+    flex: 1; /* Makes buttons equal width */
+}
+
+.nav-link {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    background-color: var(--tab-inactive);
+    color: var(--primary-blue);
+    transition: all 0.3s ease;
+}
+
+/* Hover & Active States */
+.nav-link:hover {
+    background-color: #d1d8e0;
+}
+
+.nav-link.active {
+    background-color: var(--primary-blue);
+    color: rgb(9, 6, 42) !important;
+    position: relative;
+}
+
+/* Arrow indicator for the active tab */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--primary-blue);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .nav-tabs {
+        flex-direction: column;
+        border-bottom: none;
+    }
+    .nav-item {
+        margin-bottom: 10px;
+    }
+    .nav-link.active::after {
+        display: none;
+    }
+}
